@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+    <head>
+        <!-- Site information -->
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <meta name = "author" content = "John S">
+        <meta name = "description" content = "Home Page">
+        <title>CS 166</title><meta name = "about" content = "Choose between sign in and create account">
+    </head>
+
+    <body>
+        <h1>Sign in or create an account.</h1>
+
+        <!-- Body for the decision page between a sign in and a new user -->
+        <main class = "home">
+            <form action = "{{ url_for('.index') }}" method = "POST">
+                <!-- Check space to sign in -->
+                <fieldset class = "chkSignIn">
+                    <p>
+                        <label for = "chkSignIn">I have an account and want to sign in: </label>
+                        <input type = "checkbox" value = 0 name = "chkSignIn" id = "chkSignIn"> 
+                    </p>
+                </fieldset>
+
+                <!-- Check space to create an account -->
+                <fieldset class = "chkCreate">
+                    <p>
+                        <label for = "chkCreate">I do not have an account and would like to make one: </label>
+                        <input type = "checkbox" value = 0 name = "chkCreate" id = "chkCreate"> 
+                    </p>
+                </fieldset>
+
+                <!-- Form submission button -->
+                <fieldset class = "submitChoice">
+                    <p>
+                        <button type = "submit" class = "btn btn-primary mt-4">Submit</button>
+                    </p>
+                </fieldset>
+            </form>
+        </main>
+    </body>
+</html>

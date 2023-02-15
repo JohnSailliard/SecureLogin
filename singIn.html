@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+    <head>
+        <!-- Site information -->
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <meta name = "author" content = "John S">
+        <meta name = "description" content = "Users Sign In">
+        <title>CS 166 - Users Sign In</title><meta name = "about" content = "Sign in page for CS 166 final">
+    </head>
+
+    <body>
+        <!-- Body for the sign in page -->
+        <main class = "sign-in">
+            <form action="{{ url_for('.signIn') }}" method="POST">
+                <!-- Text space for the netId -->
+                <fieldset class = "txtUsernameSignIn">
+                    <p>
+                        <label for = "txtNetId">Username: </label>
+                        <input type = "text" value = ""  name = "txtNetId" id = "txtNetId">
+                    </p>
+                </fieldset>
+
+                <!-- Text space for the password -->
+                <fieldset class = "txtPasswordSignIn">
+                    <p>
+                        <label for = "txtPasswordSignIn">Passwprd: </label>
+                        <input type = "text" value = ""  name = "txtPassword" id = "txtPasswordSignIn">
+                    </p>
+                </fieldset>
+
+                <!-- Form submission button -->
+                <fieldset class = "submitSignIn">
+                    <p>
+                        <button type = "submit" class = "btn btn-primary mt-4">Submit</button>
+                    </p>
+                </fieldset>
+            </form>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+    <head>
+        <!-- Site information -->
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <meta name = "author" content = "John S">
+        <meta name = "description" content = "Create User">
+        <title>CS 166 - New user</title><meta name = "about" content = "Create a new account for CS 166">
+    </head>
+
+    <body>
+        <!-- Body for the new user page -->
+        <main class = "new-user">
+            <form action = "{{ url_for('.newUser') }}" method = "POST">
+                <!-- Text space for the netId -->
+                <fieldset class = "txtUsernameCreate">
+                    <p>
+                        <label for = "txtNetIdNew">Username: </label>
+                        <input type = "text" value = ""  name = "txtNetIdNew" id = "txtNetIdNew">
+                    </p>
+                </fieldset>
+    
+                <!-- Text space for the password -->
+                <fieldset class = "txtPasswordCreate">
+                    <p>
+                        <label for = "txtPasswordSignInNew">Passwprd: </label>
+                        <input type = "text" value = ""  name = "txtPasswordNew" id = "txtPasswordSignInNew">
+                    </p>
+                </fieldset>
+
+                <!-- Check space for a randomly generated password -->
+                <fieldset class = "chkRandPw">
+                    <p>
+                        <label for = "chkRandPw">I would like a randomly generated password: </label>
+                        <input type = "checkbox" value = 0 name = "chkRandPw" id = "chkRandPw"> 
+                    </p>
+                </fieldset>
+
+                <!-- Form submission button -->
+                <fieldset class = "submitNewUser">
+                    <p>
+                        <button type = "submit" class = "btn btn-primary mt-4">Submit</button>
+                    </p>
+                </fieldset>
+            </form>
+        </main>
+    </body>
+</html>
